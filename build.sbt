@@ -14,7 +14,8 @@ lazy val commonSettings =
     Test / console / scalacOptions := ScalacOptions.consoleScalacOptions,
     semanticdbEnabled := true,
     semanticdbVersion := scalafixSemanticdb.revision,
-    scalafixDependencies ++= Seq("com.github.liancheng" %% "organize-imports" % "latest.release"),
+    scalafixDependencies ++= Seq("com.github.liancheng" %% "organize-imports" % "0.3.1-RC2"),
+    scalacOptions += "-Yrangepos",
     Test / parallelExecution := false,
     Test / testOptions += Tests.Argument(TestFrameworks.ScalaCheck, "-s", "100"), // -s = -minSuccessfulTests
     testFrameworks += new TestFramework("munit.Framework"),
