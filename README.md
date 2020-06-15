@@ -1,4 +1,4 @@
-# Type Classes from the Ground up
+# Type Classes from the Ground up - a Coding Kata
 
 Implement csv-parsing examples inspired by Nicolas Rinaudo's
 talk at Scalar online conference in May 2020 (https://scalar-conf.com/)
