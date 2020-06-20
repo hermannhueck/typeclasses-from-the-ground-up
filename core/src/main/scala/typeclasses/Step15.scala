@@ -6,8 +6,12 @@ import hutil.stringformat._
 import pprint._
 
 /*
-  Implement RowDecoder for List[Int]
-  (Our CSV again contains legal values in all cells)
+  Implement RowDecoder for List[Int]:
+  (Our CSV again contains legal values in all cells).
+  In this step we decode on the row level. Hence we provide a RowDecoder.
+  The RowDecoder decodes all cells of a row (using a CellDecoder) where the
+  target types of the cells do not differ. In subsequent examples
+  we implement RowDecoders with different target types for each cell.
  */
 object Step15 extends hutil.App {
 

@@ -5,7 +5,13 @@ import hutil.stringformat._
 import pprint._
 
 /*
-  Move implicit CellDecoder instances inside CellDecoder companion object
+  Move implicit CellDecoder instances inside CellDecoder companion object.
+  In the previous example the implicit instances were defined in local scope.
+  Defining the implicit instances in the companion object of the type class
+  (or in the companion object of the target type) provides the in the implicit scope.
+  Defined in implicit scope the instances are found by the compiler without extra
+  import statement. Implicit scope is weaker than local scope. Hence these instances
+  can be overridden be defining another instance of the same type in local scope.
  */
 object Step07 extends hutil.App {
 

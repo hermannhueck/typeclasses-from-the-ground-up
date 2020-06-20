@@ -5,7 +5,11 @@ import hutil.stringformat._
 import pprint._
 
 /*
-  Pass 'CellDecoder' instance as implicit parameter
+  Pass 'CellDecoder' instance as implicit parameter:
+  In this step the 2nd parameter list of parseCsv takes an implicit CellDecoder[A]
+  and the CellDecoder instaces are provided as implicit instances.
+  As the desired target type of the cell conversion cannot be inferred in our case
+  we must provide the target type in the invocation of parseCsv.
  */
 object Step06 extends hutil.App {
 

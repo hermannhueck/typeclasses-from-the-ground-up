@@ -5,7 +5,11 @@ import hutil.stringformat._
 import pprint._
 
 /*
-  Implement implicit instances with SAM types
+  Implement implicit instances with SAM types:
+  CellDecoder[A] is a SAM type (single abstract method type).
+  SAM type instances can be simply implemented with a Function1.
+  This makes the definition of the implicit instance even more concise.
+  (Adding the annotation @FunctionalInterface avoids compiler warnings.)
  */
 object Step10 extends hutil.App {
 

@@ -7,7 +7,9 @@ import pprint._
 
 /*
   Make RowDecoder for List[Int] generic in the Cell type
-  Implement RowDecoder for List[C]
+  Implement RowDecoder for List[C]:
+  In the previous step we implemented an RowDecoder which decoded each Row into a List[Int].
+  Here our generic RowDecoder decodes each Row into a List[C].
   The RowDecoder can be used for List[Int] as well as for List[String]
   (Our CSV still contains legal values in all cells)
  */

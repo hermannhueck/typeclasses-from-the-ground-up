@@ -8,6 +8,11 @@ import pprint._
 /*
   Implement a heterogeneous triple row decoder RowDecoder[(A, B, C)].
   The members of the triple have different types.
+  In our personCsv each row contains a mandatory Long (the id), a mandatory String
+  (the name) and an Option[Int] (the age which might be known or unknown).
+  The RowDecoder[(A, B, C)] requires 3 implicitly provided CellDecoders:
+  a CellDecoder[A], a CellDecoder[B] and a CellDecoder[C] to decode the cells of a row
+  into the different target types.
  */
 object Step19 extends hutil.App {
 

@@ -6,6 +6,8 @@ import pprint._
 
 /*
   Introduce function 'decodeCell: String => Int'
+  which is a parameter of parseCsv.
+  We pass the function _.toInt in the 2nd param list to parseCsv.
  */
 object Step03 extends hutil.App {
 

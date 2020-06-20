@@ -7,7 +7,7 @@ import pprint._
 
 /*
   Implement generic CellDecoder[Option[A]] using CellDecoder[A].
-  This is a conditional typeclass:
+  This is a conditional typeclass instance:
   CellDecoder[Option[A]] only works if a CellDecoder[A] is implicitly provided.
  */
 object Step13 extends hutil.App {

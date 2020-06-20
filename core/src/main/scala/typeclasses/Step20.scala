@@ -6,7 +6,9 @@ import hutil.stringformat._
 import pprint._
 
 /*
-  Implement a RowDecoder[Person].
+  Implement a RowDecoder[Person]:
+  Now we can stick the decoded row triple into a Person case class instance
+  to get a RowDecoder[Person].
  */
 object Step20 extends hutil.App {
 

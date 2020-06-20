@@ -5,7 +5,11 @@ import hutil.stringformat._
 import pprint._
 
 /*
-  Introduce typeclass 'CellDecoder'
+  Introduce typeclass 'CellDecoder[A]':
+  Instead of passing a function to parseCsv, we now pass a CellDecoder
+  object which encapsulates the function (as a method named 'decode').
+  CellDecoder[A] is a type class. For each conversion target type
+  we create a different instance, one for String and one for Int in this example.
  */
 object Step05 extends hutil.App {
 

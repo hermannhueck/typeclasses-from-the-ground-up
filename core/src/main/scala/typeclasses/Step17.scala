@@ -64,14 +64,12 @@ object Step17 extends hutil.App {
         implicit
         cellDecoder: CellDecoder[C]
     ): RowDecoder[List[C]] =
-      new RowDecoder[List[C]] {
-        def decodeRow(row: String): List[C] =
-          row
-            .split(",")
-            .toList
-            .map(_.strip)
-            .map(cellDecoder.decodeCell)
-      }
+      row =>
+        row
+          .split(",")
+          .toList
+          .map(_.strip)
+          .map(cellDecoder.decodeCell)
   }
 
   def parseCsv[A: RowDecoder](csv: String): List[A] =

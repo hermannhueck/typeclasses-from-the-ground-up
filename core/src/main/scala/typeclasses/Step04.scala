@@ -5,7 +5,9 @@ import hutil.stringformat._
 import pprint._
 
 /*
-  Introduce parametric polymorphism for parseCsv and function 'decodeCell: String => A'
+  Introduce parametric polymorphism for parseCsv and function 'decodeCell: String => A':
+  A cell value must not necessarily be parsed to Int. The target type of the
+  cell conversion might be any type A. We parameterize parseCsv with a type parameter A.
  */
 object Step04 extends hutil.App {
 

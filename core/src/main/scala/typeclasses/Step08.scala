@@ -5,7 +5,11 @@ import hutil.stringformat._
 import pprint._
 
 /*
-  Use equivalent context bound instead of implicit CellDecoder parameter
+  Use equivalent context bound instead of implicit CellDecoder parameter:
+  A context bound is just syntactic sugar for an implicit parameter.
+  It is semantically completely equivalent to an implicit parameter.
+  But using a context bound we don't habe a name for the implicit parameter.
+  That is why we use implicitly to summon the implicit instance inside parseCsv.
  */
 object Step08 extends hutil.App {
 

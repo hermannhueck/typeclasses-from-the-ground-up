@@ -6,8 +6,10 @@ import hutil.stringformat._
 import pprint._
 
 /*
-  Implement a homogeneous triple row decoder RowDecoder[(A, A, A)].
+  Implement a homogeneous triple row decoder RowDecoder[(C, C, C)].
   All three members of the triple have the same type.
+  In the previous example each row was decoded to a List of C.
+  Here we decode each row into a triple of values of type C.
  */
 object Step18 extends hutil.App {
 

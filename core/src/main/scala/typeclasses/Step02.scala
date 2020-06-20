@@ -5,7 +5,9 @@ import hutil.stringformat._
 import pprint._
 
 /*
-  Parsing CSV to a List[List[Int]]
+  Parsing a CSV String to a List[List[Int]]:
+  The cell type String is converted to Int
+  using String#toInt for the conversion of each cell.
  */
 object Step02 extends hutil.App {
 

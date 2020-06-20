@@ -5,7 +5,10 @@ import hutil.stringformat._
 import pprint._
 
 /*
-  Provide summoner inside CellDecoder companion object
+  Provide summoner inside CellDecoder companion object:
+  A summoner is an 'apply' method in the companion object of a type class
+  which returns the implicit instance thus making it explicitly available.
+  A summoner can be used as a short hand for the invocation of implicitly.
  */
 object Step09 extends hutil.App {
 
