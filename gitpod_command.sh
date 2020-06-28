@@ -1,7 +1,7 @@
  #!/bin/bash
 
 METALS_DIR="$GITPOD_REPO_ROOT/.metals"
-BLOOP_VERSION="1.4.0-RC1-162-888454e1"
+BLOOP_VERSION="1.4.2
 
 export PATH=$PATH:/usr/local/openjdk-8/bin
 
