@@ -90,11 +90,11 @@ object Step18 extends hutil.App {
       .toList
       .map(RowDecoder[A].decodeRow)
 
-  s"$dash10 parse csv to List[(String, String, String)] $dash10".magenta.println
+  s"$dash10 parse csv to List[(String, String, String)] $dash10".magenta.println()
   parseCsv[(String, String, String)](csv)
     .pipe { pprintln(_, width = 32, indent = 2) }
 
-  s"$dash10 parse csv to List[(Option[Int], Option[Int], Option[Int])] $dash10".magenta.println
+  s"$dash10 parse csv to List[(Option[Int], Option[Int], Option[Int])] $dash10".magenta.println()
   parseCsv[(Option[Int], Option[Int], Option[Int])](csv)
     .pipe { pprintln(_, width = 36, indent = 2) }
 }

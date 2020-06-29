@@ -28,11 +28,11 @@ object Step04 extends hutil.App {
           .map(decodeCell)
       }
 
-  s"$dash10 parse csv to List[List[String]] $dash10".magenta.println
+  s"$dash10 parse csv to List[List[String]] $dash10".magenta.println()
   parseCsv(csv)(identity)
     .pipe { pprintln(_, width = 32, indent = 2) }
 
-  s"$dash10 parse csv to List[List[Int]] $dash10".magenta.println
+  s"$dash10 parse csv to List[List[Int]] $dash10".magenta.println()
   parseCsv(csv)(_.toInt)
     .pipe { pprintln(_, width = 32, indent = 2) }
 }

@@ -43,11 +43,11 @@ object Step05 extends hutil.App {
           .map(decoder.decode)
       }
 
-  s"$dash10 parse csv to List[List[String]] $dash10".magenta.println
+  s"$dash10 parse csv to List[List[String]] $dash10".magenta.println()
   parseCsv(csv)(stringDecoder)
     .tap { pprintln(_, width = 32, indent = 2) }
 
-  s"$dash10 parse csv to List[List[Int]] $dash10".magenta.println
+  s"$dash10 parse csv to List[List[Int]] $dash10".magenta.println()
   parseCsv(csv)(intDecoder)
     .tap { pprintln(_, width = 32, indent = 2) }
 }

@@ -52,11 +52,11 @@ object Step11 extends hutil.App {
           .map(CellDecoder[A].decode)
       }
 
-  s"$dash10 parse csv to List[List[String]] $dash10".magenta.println
+  s"$dash10 parse csv to List[List[String]] $dash10".magenta.println()
   parseCsv[String](csv)
     .pipe { pprintln(_, width = 32, indent = 2) }
 
-  s"$dash10 parse csv to List[List[Int]] --> throws NumberFormatException $dash10".magenta.println
+  s"$dash10 parse csv to List[List[Int]] --> throws NumberFormatException $dash10".magenta.println()
   Try {
     parseCsv[Int](csv)
       .pipe { pprintln(_, width = 32, indent = 2) }

@@ -78,11 +78,11 @@ object Step17 extends hutil.App {
       .toList
       .map(RowDecoder[A].decodeRow)
 
-  s"$dash10 parse csv to List[List[String]] $dash10".magenta.println
+  s"$dash10 parse csv to List[List[String]] $dash10".magenta.println()
   parseCsv[List[String]](csv)
     .pipe { pprintln(_, width = 32, indent = 2) }
 
-  s"$dash10 parse csv to List[List[Option[Int]]] $dash10".magenta.println
+  s"$dash10 parse csv to List[List[Option[Int]]] $dash10".magenta.println()
   parseCsv[List[Option[Int]]](csv)
     .pipe { pprintln(_, width = 36, indent = 2) }
 }

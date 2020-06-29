@@ -28,7 +28,7 @@ object Step02 extends hutil.App {
           .map(_.toInt)
       }
 
-  s"$dash10 parse csv to List[List[Int]] $dash10".magenta.println
+  s"$dash10 parse csv to List[List[Int]] $dash10".magenta.println()
   parseCsv(csv)
     .tap { pprintln(_, width = 32, indent = 2) }
 }
